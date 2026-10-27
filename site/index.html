@@ -60,8 +60,8 @@
       <a class="btn btn-line" href="https://github.com/davideconte/ponte">View on GitHub</a>
     </div>
     <div class="install">
-      <code><span class="prompt">$</span> uv tool install ponte-mcp</code>
-      <button class="copy" type="button" data-copy="uv tool install ponte-mcp" aria-label="Copy install command">Copy</button>
+      <code><span class="prompt">$</span> uv tool install git+https://github.com/davideconte/ponte</code>
+      <button class="copy" type="button" data-copy="uv tool install git+https://github.com/davideconte/ponte" aria-label="Copy install command">Copy</button>
     </div>
     <p class="meta">Python 3.10+ &middot; macOS and Linux</p>
   </div>
@@ -238,13 +238,13 @@
         <div class="step-head"><span class="step-n">1</span><h3>Both people install</h3></div>
         <div class="code">
           <button class="copy" type="button" data-copy-from="code-install" aria-label="Copy install commands">Copy</button>
-<pre id="code-install"><code>uv tool install ponte-mcp            <span class="c"># or: pipx install ponte-mcp</span>
+<pre id="code-install"><code>uv tool install git+https://github.com/davideconte/ponte
 ponte init --name davide
 claude mcp add ponte --scope user -- ponte mcp
 ponte hook install                   <span class="c"># new messages appear in Claude Code on every prompt</span>
 ponte service install                <span class="c"># daemon at login (launchd / systemd --user)</span></code></pre>
         </div>
-        <p class="note">From source: <code class="wrapcode">uv tool install git+https://github.com/davideconte/ponte</code>. For other MCP clients, register <code>ponte mcp</code> as a stdio server.</p>
+        <p class="note">For other MCP clients, register <code>ponte mcp</code> as a stdio server.</p>
       </li>
       <li>
         <div class="step-head"><span class="step-n">2</span><h3>The host opens a room</h3></div>
