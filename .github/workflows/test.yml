@@ -1,14 +1,38 @@
 name: test
 on: [push, pull_request]
 jobs:
-  test:
+  node:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        python: ["3.10", "3.12", "3.13"]
+        node: ["20", "22"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  # The Python implementation (Ponte 0.1) lives in git history: the script
+  # checks it out, runs its own pytest suite, then the cross-compatibility tests.
+  cross-compat:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
       - uses: astral-sh/setup-uv@v6
-      - run: uv venv --python ${{ matrix.python }} && uv pip install -e ".[dev]"
-      - run: uv run --no-sync pytest -q
+      - run: npm ci
+      - run: npm run test:cross

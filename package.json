@@ -1,0 +1,46 @@
+{
+  "name": "ponte-mcp",
+  "version": "0.2.0",
+  "description": "An end-to-end encrypted bridge between people's coding agents (Claude Code, Codex, any MCP client).",
+  "type": "module",
+  "bin": {
+    "ponte": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test --test-concurrency=1 test/*.test.js",
+    "test:cross": "npm run build && sh scripts/cross-compat.sh",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "claude-code",
+    "codex",
+    "agents",
+    "collaboration",
+    "end-to-end-encryption"
+  ],
+  "author": "Davide Conte",
+  "license": "MIT",
+  "homepage": "https://github.com/davideconte/ponte",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davideconte/ponte.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@noble/ciphers": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}

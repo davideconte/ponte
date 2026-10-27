@@ -1,0 +1,187 @@
+{
+ "generated_by": "ponte 0.1.0 (Python)",
+ "rooms": [
+  {
+   "secret_b64": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+   "room": "r-4d25ed72ba528cd7cc85",
+   "token": "01kRyOGJ-8orl0i4FCx2oOzYET-xWpI0J3bHdnGlPgI",
+   "key_hex": "9c4decc966f0439c73323ffe80abfa33e77bf9e1853ccac02970fb820adaf52a",
+   "sealed_fixed_nonce": [
+    {
+     "sender": "alice",
+     "text": "hello",
+     "nonce_hex": "010101010101010101010101010101010101010101010101",
+     "body": "ponte1.AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBLqU1SRNaKYO89-1s1jO5lTYDtwCq"
+    },
+    {
+     "sender": "alice",
+     "text": "ciao \u2713 caf\u00e9 \ud83c\udf0a",
+     "nonce_hex": "010101010101010101010101010101010101010101010101",
+     "body": "ponte1.AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBJak4SlyJ_lvrL1EzSSBcvDeDfo3f8PE00o4YZAkZyZhN13c"
+    },
+    {
+     "sender": "alice",
+     "text": "",
+     "nonce_hex": "010101010101010101010101010101010101010101010101",
+     "body": "ponte1.AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBet4Gn5uzJ8V2hott8aIOxQ"
+    },
+    {
+     "sender": "alice",
+     "text": "line one\nline two\t<tag>",
+     "nonce_hex": "010101010101010101010101010101010101010101010101",
+     "body": "ponte1.AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBKqk3QFwEDK3BIFk776kIO8cGyCnUWVYAgoCmZOjTz8vUXCnxQEi1"
+    }
+   ],
+   "sealed_random_nonce": [
+    {
+     "sender": "bob",
+     "text": "hello",
+     "body": "ponte1.WB9gKU6oNrkuQPd7UNqvo85p3C2wbQoOEwglMISrQfxksKAawpMgoRe1G5st"
+    },
+    {
+     "sender": "bob",
+     "text": "ciao \u2713 caf\u00e9 \ud83c\udf0a",
+     "body": "ponte1.dPhAJrDMmbETJA8pTal1aj7YauFwNLl5YFwxLyZO2rzb0j3ASx4SaziDp1w74y6kvweeVlKId6yym3A"
+    },
+    {
+     "sender": "bob",
+     "text": "",
+     "body": "ponte1.PLgS0cF1IBBCXXRqdrMPyO01M9wuWdWqEovXP-zvDJ_xaTaUH8Y8FQ"
+    },
+    {
+     "sender": "bob",
+     "text": "line one\nline two\t<tag>",
+     "body": "ponte1.j2OF0kbpvtD5B0EyjhIea7X2B0xaUt7o1-tMjCvtGDS55TCkazYscBwUIgs8z-welz6WY9--lyNWa06ASgI3"
+    }
+   ]
+  },
+  {
+   "secret_b64": "__________________________________________8",
+   "room": "r-6d272ebe2ee18a2e41ed",
+   "token": "DDoUoIwIKf5SLfFNlRmyK2OyQhlqoepTDo0Yj9JCoaE",
+   "key_hex": "80a7be9a224f00127c31970eb08c19d9634932b90b0a83d665b17b71b6ec8224",
+   "sealed_fixed_nonce": [
+    {
+     "sender": "alice",
+     "text": "hello",
+     "nonce_hex": "020202020202020202020202020202020202020202020202",
+     "body": "ponte1.AgICAgICAgICAgICAgICAgICAgICAgICrBpxLVTtYqA1rwGhbaQFDhEQNHKO"
+    },
+    {
+     "sender": "alice",
+     "text": "ciao \u2713 caf\u00e9 \ud83c\udf0a",
+     "nonce_hex": "020202020202020202020202020202020202020202020202",
+     "body": "ponte1.AgICAgICAgICAgICAgICAgICAgICAgICpxZ8LhsKmBhTUBhpUOw6Cs0UDMJNbNOy_6iOiGjgJflU91A"
+    },
+    {
+     "sender": "alice",
+     "text": "",
+     "nonce_hex": "020202020202020202020202020202020202020202020202",
+     "body": "ponte1.AgICAgICAgICAgICAgICAgICAgICAgICqwfRr83tB-d8mrlMJNKDAA"
+    },
+    {
+     "sender": "alice",
+     "text": "line one\nline two\t<tag>",
+     "nonce_hex": "020202020202020202020202020202020202020202020202",
+     "body": "ponte1.AgICAgICAgICAgICAgICAgICAgICAgICqBZzJBuHau55XxBh9mVujT2RukvozVzH9cKQMSQllAvpSC9onVOP"
+    }
+   ],
+   "sealed_random_nonce": [
+    {
+     "sender": "bob",
+     "text": "hello",
+     "body": "ponte1.ln8Hd-vC4OITHie8uRbxTSLwf4MxtFVPzCpifWCvkR3aOzsg3JTWI1w65ESd"
+    },
+    {
+     "sender": "bob",
+     "text": "ciao \u2713 caf\u00e9 \ud83c\udf0a",
+     "body": "ponte1.CWNnxHo4kENNFAdFHjXAIdNDwHktMAj1wg2luzOP75esP-rbK0rFEroO6E_vspwR3nyhDGHxlJZFov8"
+    },
+    {
+     "sender": "bob",
+     "text": "",
+     "body": "ponte1.raEGU4XiBGOj-u1qr5-LrMgXTMP_dI8OvNY0-5y-U02HpLdLIloeqQ"
+    },
+    {
+     "sender": "bob",
+     "text": "line one\nline two\t<tag>",
+     "body": "ponte1.-eFX5ay9qMiJu-_wk72m7rFYUGgdB1GTqvzHE3yVQypyAMyIuTciZS_u09ckAWfcZDqSw8ZxXh4qx9FG5Q7Q"
+    }
+   ]
+  },
+  {
+   "secret_b64": "X19fX19fX19fX19fX19fX6CgoKCgoKCgoKCgoKCgoKA",
+   "room": "r-a738847aec65ca518326",
+   "token": "pD7S1KYHzO9TTJ97SAD3fofwuXYzRN0CM89b23aYoAo",
+   "key_hex": "80a57752dab548caba7e772ac90e919bf371a3635646a29dee5cbd8e321d2f6b",
+   "sealed_fixed_nonce": [
+    {
+     "sender": "alice",
+     "text": "hello",
+     "nonce_hex": "030303030303030303030303030303030303030303030303",
+     "body": "ponte1.AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDMl1o02WjVyOe0DKdBqCYVcNMmzE4"
+    },
+    {
+     "sender": "alice",
+     "text": "ciao \u2713 caf\u00e9 \ud83c\udf0a",
+     "nonce_hex": "030303030303030303030303030303030303030303030303",
+     "body": "ponte1.AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDOVFl0CqNTCuE1MGxsIQFYKs4akh_PVdrD7TR3CgYbQ6vC5I"
+    },
+    {
+     "sender": "alice",
+     "text": "",
+     "nonce_hex": "030303030303030303030303030303030303030303030303",
+     "body": "ponte1.AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDPrubXtG4kr8_uhcCzUQ1Gw"
+    },
+    {
+     "sender": "alice",
+     "text": "line one\nline two\t<tag>",
+     "nonce_hex": "030303030303030303030303030303030303030303030303",
+     "body": "ponte1.AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDNlFq2ioAvt2u28m5Fg1R51u93G_A7wNKzHjXfFJybTqx_qsarT1k"
+    }
+   ],
+   "sealed_random_nonce": [
+    {
+     "sender": "bob",
+     "text": "hello",
+     "body": "ponte1.QBObmbF_I0KqXvQLKf8PQlOY9_1JLw13vhS-b7_H-XdESiY19AJRnxVs8ml5"
+    },
+    {
+     "sender": "bob",
+     "text": "ciao \u2713 caf\u00e9 \ud83c\udf0a",
+     "body": "ponte1.KBoll5U3ECPCse28MBd8Yqn2v1tA4f5zUQYnHlisfDy1aVq-f9QEWvVAkYKZbN3VqcMSwUe-Sc22hr8"
+    },
+    {
+     "sender": "bob",
+     "text": "",
+     "body": "ponte1.UUV2M5d9MeR7gVqw4cyjD939e9ISzQjtl8NwesNBaUurzpIqLcusEQ"
+    },
+    {
+     "sender": "bob",
+     "text": "line one\nline two\t<tag>",
+     "body": "ponte1.bVUKHlKPqizSI2WJKT3xGBsDBD35li4e7PddOQ0QutO7hd1sur7Rjh3LtyDSD3wnxyMOB3YNhviqpI8SF5Yx"
+    }
+   ]
+  }
+ ],
+ "invites": [
+  {
+   "url": "http://host.local:8787",
+   "secret_b64": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+   "host": "davide",
+   "invite": "ponte1_eyJ1IjoiaHR0cDovL2hvc3QubG9jYWw6ODc4NyIsInMiOiJBQUVDQXdRRkJnY0lDUW9MREEwT0R4QVJFaE1VRlJZWEdCa2FHeHdkSGg4IiwiaCI6ImRhdmlkZSJ9"
+  },
+  {
+   "url": "https://relay.example.com",
+   "secret_b64": "__________________________________________8",
+   "host": "",
+   "invite": "ponte1_eyJ1IjoiaHR0cHM6Ly9yZWxheS5leGFtcGxlLmNvbSIsInMiOiJfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX184In0"
+  },
+  {
+   "url": "https://ex\u00e4mple.org/p",
+   "secret_b64": "X19fX19fX19fX19fX19fX6CgoKCgoKCgoKCgoKCgoKA",
+   "host": "Carlo B",
+   "invite": "ponte1_eyJ1IjoiaHR0cHM6Ly9leFx1MDBlNG1wbGUub3JnL3AiLCJzIjoiWDE5ZlgxOWZYMTlmWDE5ZlgxOWZYNkNnb0tDZ29LQ2dvS0Nnb0tDZ29LQSIsImgiOiJDYXJsbyBCIn0"
+  }
+ ]
+}
