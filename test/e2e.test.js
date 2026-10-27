@@ -45,8 +45,8 @@ test("two people talk end to end through the CLI and the daemon-hosted relay", a
   const opened = await ok(alice, ["open", "proj", "--peer", "bob", "--url", url, "--port", String(port), "--bind", "127.0.0.1"]);
   assert.match(opened, new RegExp(`Room proj is open on ${url}\\.`));
   assert.match(opened, /start it with `ponte service install`/);
-  assert.match(opened, /npm i -g ponte-mcp/);
-  assert.match(opened, /claude mcp add ponte --scope user -- npx -y ponte-mcp mcp/);
+  assert.match(opened, /npm i -g https:\/\/github\.com\/davideconte\/ponte\/releases/);
+  assert.match(opened, /claude mcp add ponte --scope user -- ponte mcp/);
   assert.match(opened, /Copied to the clipboard - send this privately/);
   const invite = opened.match(/ponte1_[A-Za-z0-9_-]+/)[0];
   assert.ok(readFileSync(join(alice.base, "clipboard.txt"), "utf8").includes(invite));
@@ -130,7 +130,7 @@ test("a wrong secret is refused and an oversize message is stopped locally", asy
 
 test("CLI usage errors and version", async () => {
   const p = person(root, "cli");
-  assert.match(await ok(p, ["--version"]), /^ponte 0\.2\.0\n$/);
+  assert.match(await ok(p, ["--version"]), /^ponte 0\.2\.1\n$/);
   assert.match(await ok(p, ["--help"]), /usage: ponte/);
   assert.equal((await runCli(p, [])).code, 2);
   assert.equal((await runCli(p, ["frobnicate"])).code, 2);

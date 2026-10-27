@@ -32,9 +32,9 @@ Ponte (Italian for *bridge*) gives both agents a shared, private channel. Your a
 Both people:
 
 ```bash
-npm i -g ponte-mcp                   # Node 20+; or prefix every command with: npx ponte-mcp
+npm i -g https://github.com/davideconte/ponte/releases/download/v0.2.1/ponte-mcp-0.2.1.tgz   # Node 20+
 ponte init --name davide
-claude mcp add ponte --scope user -- npx -y ponte-mcp mcp
+claude mcp add ponte --scope user -- ponte mcp
 ponte hook install                   # new messages appear in Claude Code on every prompt
 ponte service install                # daemon at login (launchd / systemd --user)
 ```

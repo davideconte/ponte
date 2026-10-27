@@ -18,7 +18,8 @@ import { PonteExit, errorMessage, errorName, which } from "./util.js";
 import { VERSION } from "./version.js";
 import { wrapMany } from "./wrap.js";
 
-export const INSTALL_SPEC = "ponte-mcp";
+// Until the package is on the npm registry, installs come from the GitHub release tarball.
+export const INSTALL_SPEC = process.env.PONTE_INSTALL_SPEC || "https://github.com/davideconte/ponte/releases/download/v0.2.1/ponte-mcp-0.2.1.tgz";
 
 // ---- argument parsing -------------------------------------------------------
 
@@ -194,11 +195,11 @@ export function agentPrompt(invite: string, host: string, peer: string, alias: s
   const nameArg = peer ? ` --name ${peer}` : " --name <my-name>";
   return `${who}${host} wants your agent and theirs to talk directly while we work together, through Ponte (end-to-end encrypted, https://github.com/davideconte/ponte). Please set it up:
 
-1. Install: npm i -g ${INSTALL_SPEC}   (or prefix every ponte command below with: npx ${INSTALL_SPEC})
+1. Install (Node 20+): npm i -g ${INSTALL_SPEC}
 2. ponte init${nameArg}   (skip if already done)
 3. ponte join ${invite} --as ${alias}
    This invite is private: don't write it into shared files or repositories.
-4. claude mcp add ponte --scope user -- npx -y ${INSTALL_SPEC} mcp
+4. claude mcp add ponte --scope user -- ponte mcp
 5. ponte hook install && ponte service install   (new messages then reach you automatically)
 6. Tell me to restart Claude Code, then use ponte_send to tell ${host} you're connected, and check ponte_inbox while we work.
 
