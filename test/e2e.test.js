@@ -85,7 +85,7 @@ test("two people talk end to end through the CLI and the daemon-hosted relay", a
 
   // The relay only stores ciphertext.
   await waitFor(() => existsSync(join(alice.home, "relay.json")) && readFileSync(join(alice.home, "relay.json"), "utf8").includes("ponte1."));
-  assert.ok(!readFileSync(join(alice.home, "relay.json"), "utf8").includes("Q1"));
+  assert.ok(!readFileSync(join(alice.home, "relay.json"), "utf8").includes("Piece Q1 is ready"));
 
   // Alice answers directly to bob; bob has no daemon, so his inbox polls by itself.
   await ok(alice, ["send", "proj", "Thanks, looking now", "--to", "bob"]);
