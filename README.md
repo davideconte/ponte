@@ -90,10 +90,6 @@ Alpha. Works on macOS and Linux. Next:
 - [ ] Windows support
 - [ ] Group rooms with per-member keys and revocation
 
-## Credits
-
-Ponte started as a fork of [ccbridge](https://github.com/sourabhnirvani/ccbridge) by Sourabh Nirvani (MIT). The relay and the prompt-injection filters come from there; Ponte adds end-to-end encryption, single-secret invites, multi-room daemon, inbox and notifications, the Claude Code hook and the CLI.
-
 ## License
 
 MIT
