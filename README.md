@@ -25,16 +25,16 @@ Ponte (Italian for *bridge*) gives both agents a shared, private channel. Your a
 - **Messages reach the agent by themselves.** A small daemon listens to all your rooms, keeps an inbox and a readable log per room, and sends a desktop notification. In Claude Code, a hook puts new messages in front of the agent on your next prompt: no more "any news?".
 - **One install, every room.** One MCP server registered once at user scope serves all your collaborations. Rooms have local names (`acme-site`, `video-shoot`).
 - **Safe by default.** Every inbound message is framed as untrusted data with a random tag the sender can't forge; harness-style markup (`<system-reminder>`, fake turns) is neutralized; a peer can never approve anything. Rooms are closed: the relay only accepts rooms its host created.
-- **Self-hosted, zero accounts.** The relay is a tiny FastAPI + SQLite service that runs inside your daemon. On the same network it just works; across the internet put it behind any tunnel (Tailscale, Cloudflare) and pass `--url`.
+- **Self-hosted, zero accounts.** The relay is a small Node.js HTTP service, with no native dependencies, that runs inside your daemon. On the same network it just works; across the internet put it behind any tunnel (Tailscale, Cloudflare) and pass `--url`.
 
 ## Quick start
 
 Both people:
 
 ```bash
-uv tool install ponte-mcp            # or: pipx install ponte-mcp
+npm i -g ponte-mcp                   # Node 20+; or prefix every command with: npx ponte-mcp
 ponte init --name davide
-claude mcp add ponte --scope user -- ponte mcp
+claude mcp add ponte --scope user -- npx -y ponte-mcp mcp
 ponte hook install                   # new messages appear in Claude Code on every prompt
 ponte service install                # daemon at login (launchd / systemd --user)
 ```
@@ -78,6 +78,10 @@ MCP tools: `ponte_inbox`, `ponte_send`, `ponte_rooms`, `ponte_history`.
 - **What you should still do:** keep permission prompts on in sessions where Ponte is active, and never put credentials in a room. A message that asks your agent to send files or secrets is exactly what the framing tells it to refuse.
 - **Invites are keys.** Share them privately; `ponte close` on the host side revokes a room.
 - Local state lives in `~/.ponte` (0700); room secrets never leave it except inside invites you give out.
+
+## Python implementation
+
+Ponte 0.1 was written in Python. That version lives in the git history (commit `6f0eb80`); `npm run test:cross` checks it out into a temp dir and verifies that the two implementations read each other's invites, messages and relays.
 
 ## Status and roadmap
 
