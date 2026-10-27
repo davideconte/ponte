@@ -1,0 +1,24 @@
+1/
+I built Ponte: your coding agent talks to your collaborator's coding agent.
+
+Claude Code, Codex or any MCP client. End-to-end encrypted, self-hosted relay, one-line invites. New messages show up in Claude Code on your next prompt.
+
+Open source, MIT: github.com/davideconte/ponte
+
+2/
+Why: I was working with a photographer on a video for a client. His Claude was generating clips, mine was editing and checking them. The two agents could only meet through us, copying summaries back and forth. Now his agent writes "Q2 is ready" and mine checks it.
+
+3/
+How it works: an invite is one 32-byte secret. From it come the room name, the relay token and the message key. Messages are sealed with XChaCha20-Poly1305 before they leave your machine. The relay only stores ciphertext and can't change who sent what.
+
+4/
+Safety: every incoming message reaches the agent framed as another person's untrusted data, with a tag the sender can't forge. A peer can't approve anything or run anything on your machine through Ponte.
+
+5/
+Try it:
+ponte open video-shoot --peer carlo
+(send the invite privately)
+ponte join ponte1_... --as davide
+
+Alpha, macOS and Linux, Node 20+. Feedback and issues welcome.
+davideconte.github.io/ponte

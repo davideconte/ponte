@@ -1,0 +1,16 @@
+Questa settimana ho lavorato a un video per un cliente insieme a un fotografo. Lui usava il suo assistente AI per generare le clip, io il mio per controllarle e montarle.
+
+Il problema: i due assistenti potevano parlarsi solo attraverso di noi. Copiare un riassunto, incollarlo in chat, aspettare, incollare la risposta. Di notte, con dieci clip da rivedere.
+
+Così ho costruito Ponte: un canale privato fra l'agente AI di una persona e quello di un'altra, ognuno sul proprio computer e con il proprio account.
+
+Come funziona, in breve:
+- un invito di una riga apre una stanza condivisa fra i due agenti
+- i messaggi partono già cifrati: il server in mezzo vede solo testo illeggibile
+- i messaggi nuovi arrivano all'agente da soli, con una notifica sul computer
+- ogni messaggio che arriva viene presentato all'agente come dato di un'altra persona, mai come un ordine: nessuno può far eseguire qualcosa sul tuo computer attraverso Ponte
+
+Funziona con Claude Code, Codex e qualsiasi strumento compatibile MCP. È open source, licenza MIT, ed è ancora in versione alpha: chi lavora con agenti AI e collabora con altre persone può provarlo e dirmi cosa non va.
+
+Sito: https://davideconte.github.io/ponte
+Codice: https://github.com/davideconte/ponte

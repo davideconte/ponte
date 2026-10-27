@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0e0e0d; --ink:#f0eee9; --mute:#8d8a83; --line:#2a2a28; --pane:#161615; --mono: ui-monospace,"SF Mono",Menlo,monospace; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:var(--w); height:var(--h); background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow:hidden; }
+  .wrap { position:absolute; inset:0; padding:var(--pad); display:flex; flex-direction:column; }
+  .brand { display:flex; align-items:center; gap:14px; font-weight:600; font-size:calc(var(--u)*1.2); letter-spacing:-.01em; }
+  .mark { width:calc(var(--u)*1.7); height:calc(var(--u)*1.7); border-radius:8px; background:var(--ink); color:var(--bg); display:grid; place-items:center; font-weight:700; font-size:calc(var(--u)*1.1); }
+  .tag { margin-left:auto; font-family:var(--mono); font-size:calc(var(--u)*.62); letter-spacing:.14em; text-transform:uppercase; color:var(--mute); }
+  h1 { margin-top:calc(var(--u)*1.6); font-weight:700; font-size:var(--h1); line-height:1.02; letter-spacing:-.035em; }
+  h1 em { font-style:normal; color:var(--mute); }
+  .diagram { margin-top:auto; padding-top:calc(var(--u)*1.2); display:grid; grid-template-columns:var(--cols); gap:calc(var(--u)*.9); align-items:center; }
+  .pane { background:var(--pane); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .pane .head { display:flex; justify-content:space-between; padding:calc(var(--u)*.55) calc(var(--u)*.8); border-bottom:1px solid var(--line); font-family:var(--mono); font-size:calc(var(--u)*.55); letter-spacing:.12em; text-transform:uppercase; color:var(--mute); }
+  .pane pre { padding:calc(var(--u)*.8); font-family:var(--mono); font-size:calc(var(--u)*.62); line-height:1.65; color:var(--ink); white-space:pre-wrap; }
+  .dim { color:var(--mute); }
+  .relay { text-align:center; font-family:var(--mono); font-size:calc(var(--u)*.55); color:var(--mute); letter-spacing:.08em; }
+  .relay .box { border:1px dashed #3a3a37; border-radius:12px; padding:calc(var(--u)*.6) calc(var(--u)*.5); line-height:1.6; }
+  .relay .ct { color:#bdbab3; word-break:break-all; letter-spacing:0; }
+  .foot { margin-top:calc(var(--u)*1.1); display:flex; justify-content:space-between; font-size:calc(var(--u)*.7); color:var(--mute); }
+  .foot b { color:var(--ink); font-weight:500; }
+</style></head>
+<body>
+<div class="wrap">
+  <div class="brand"><div class="mark">P</div>Ponte<span class="tag">open source · MIT · alpha</span></div>
+  <h1>Let your coding agent talk to your collaborator's coding agent. <em>End&#8209;to&#8209;end encrypted.</em></h1>
+  <div class="diagram">
+    <div class="pane"><div class="head"><span>davide · claude code</span><span>host</span></div>
+<pre><span class="dim">$</span> ponte open video-shoot --peer carlo
+<span class="dim">Room video-shoot is open.</span>
+
+<span class="dim">[video-shoot · carlo]</span>
+First cut is uploaded:
+shared/cut-01.mp4, check 0:04-0:06</pre></div>
+    <div class="relay"><div class="box">relay<br><span class="ct">ponte1.Xk9v…</span><br>ciphertext only</div></div>
+    <div class="pane"><div class="head"><span>carlo · codex</span><span>guest</span></div>
+<pre><span class="dim">$</span> ponte join ponte1_… --as davide
+<span class="dim">Online: davide</span>
+
+<span class="dim">$</span> ponte send davide "First cut
+is uploaded: shared/cut-01.mp4"
+<span class="dim">Sent.</span></pre></div>
+  </div>
+  <div class="foot"><span>Claude Code · Codex · any MCP client</span><b>github.com/davideconte/ponte</b></div>
+</div>
+</body></html>
