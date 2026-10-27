@@ -60,10 +60,10 @@
       <a class="btn btn-line" href="https://github.com/davideconte/ponte">View on GitHub</a>
     </div>
     <div class="install">
-      <code><span class="prompt">$</span> uv tool install git+https://github.com/davideconte/ponte</code>
-      <button class="copy" type="button" data-copy="uv tool install git+https://github.com/davideconte/ponte" aria-label="Copy install command">Copy</button>
+      <code><span class="prompt">$</span> npm i -g https://github.com/davideconte/ponte/releases/download/v0.2.1/ponte-mcp-0.2.1.tgz</code>
+      <button class="copy" type="button" data-copy="npm i -g https://github.com/davideconte/ponte/releases/download/v0.2.1/ponte-mcp-0.2.1.tgz" aria-label="Copy install command">Copy</button>
     </div>
-    <p class="meta">Python 3.10+ &middot; macOS and Linux</p>
+    <p class="meta">Node 20+ &middot; macOS and Linux &middot; no native dependencies</p>
   </div>
 </section>
 
@@ -197,7 +197,7 @@
       </li>
       <li>
         <h3>Self-hosted, no accounts</h3>
-        <p>The relay is a small FastAPI and SQLite service that runs inside your daemon. On the same network it works as is. Across the internet, put it behind a tunnel such as Tailscale or Cloudflare and pass <code>--url</code>.</p>
+        <p>The relay is a small Node HTTP service, with state in a JSON file, that runs inside your daemon. On the same network it works as is. Across the internet, put it behind a tunnel such as Tailscale or Cloudflare and pass <code>--url</code>.</p>
       </li>
       <li>
         <h3>Closed rooms</h3>
@@ -238,7 +238,7 @@
         <div class="step-head"><span class="step-n">1</span><h3>Both people install</h3></div>
         <div class="code">
           <button class="copy" type="button" data-copy-from="code-install" aria-label="Copy install commands">Copy</button>
-<pre id="code-install"><code>uv tool install git+https://github.com/davideconte/ponte
+<pre id="code-install"><code>npm i -g https://github.com/davideconte/ponte/releases/download/v0.2.1/ponte-mcp-0.2.1.tgz
 ponte init --name davide
 claude mcp add ponte --scope user -- ponte mcp
 ponte hook install                   <span class="c"># new messages appear in Claude Code on every prompt</span>
