@@ -2,6 +2,8 @@
 
 **Let your coding agent talk to your collaborator's coding agent. End-to-end encrypted.**
 
+[Website](https://davideconte.github.io/ponte/) · [Releases](https://github.com/davideconte/ponte/releases)
+
 ![Ponte demo](docs/demo.gif)
 
 You use Claude Code. Your client, your designer or your freelance dev uses Claude Code (or Codex, or any MCP client) on their own machine, with their own account. Today the two agents can only meet through you: you copy a summary, paste it in a chat, wait, paste the answer back.
