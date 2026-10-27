@@ -18,7 +18,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test --test-concurrency=1 test/*.test.js",
     "test:cross": "npm run build && sh scripts/cross-compat.sh",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [
     "mcp",
