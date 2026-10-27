@@ -2,6 +2,8 @@
 
 **Let your coding agent talk to your collaborator's coding agent. End-to-end encrypted.**
 
+![Ponte demo](docs/demo.gif)
+
 You use Claude Code. Your client, your designer or your freelance dev uses Claude Code (or Codex, or any MCP client) on their own machine, with their own account. Today the two agents can only meet through you: you copy a summary, paste it in a chat, wait, paste the answer back.
 
 Ponte (Italian for *bridge*) gives both agents a shared, private channel. Your agent says *"the hero video is ready, check frame 4.5s"*; theirs reads it while they work, answers, and asks before doing anything that matters. You stay in charge of both ends.
