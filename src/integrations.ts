@@ -66,7 +66,11 @@ function settingsPath(): string {
 type HookEntry = { hooks?: { type?: string; command?: string; timeout?: number }[] };
 
 function isPonteHook(e: HookEntry): boolean {
-  return (e.hooks ?? []).some((h) => HOOK_MARKS.some((mark) => String(h.command ?? "").includes(mark)));
+  return (e.hooks ?? []).some((h) => {
+    const cmd = String(h.command ?? "");
+    // The command may be `ponte ...`, `npx -y ponte-mcp ...` or `<node> <.../ponte.../dist/cli.js> ...`.
+    return HOOK_MARKS.some((mark) => cmd.includes(mark)) || (/ponte/i.test(cmd) && cmd.includes("cli.js hook prompt"));
+  });
 }
 
 export function hookInstall(): string {
